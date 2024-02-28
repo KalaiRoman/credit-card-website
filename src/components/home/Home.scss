@@ -12,6 +12,19 @@
         background-position: center;
         background-repeat: no-repeat;
         background-color: cover;
+        position: relative;
+    }
+    .list-names-position {
+        position: absolute;
+        top: 32%;
+        left: 25%;
+        width: 32%;
+    }
+    .list-names-positions {
+        font-size: 3.2rem;
+        color: white;
+        font-weight: 800;
+        width: 100%;
     }
     .banner-home-section {
         position: absolute;
@@ -19,10 +32,27 @@
         z-index: 98989889 !important;
         width: 100%;
     }
+    .buttons {
+        width: auto;
+        padding: 10px 30px;
+        border-radius: 8px;
+        background-color: #e00707;
+        color: white;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        font-size: 1.2rem;
+        font-weight: 800;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
     .slider-image {
         width: 100%;
         height: 100vh;
         object-fit: cover;
+        opacity: 0.9;
     }
 }
 

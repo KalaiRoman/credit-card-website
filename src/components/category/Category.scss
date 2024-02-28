@@ -1,0 +1,43 @@
+@use "../../sass/abstract/" as *;
+
+.main-category-section {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 40%;
+    .inside-category {
+        width: 100%;
+        height: 100%;
+        .list-category-section {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 5%;
+        }
+        .list-category-card {
+            width: 22% !important;
+            height: 200px !important;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 10px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .list-category-card:hover {
+            box-shadow:
+                rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+                rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        .list-category-cards {
+            width: 22% !important;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .list-category-cards:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+    }
+}
