@@ -1,0 +1,26 @@
+@use "../../sass/abstract/" as *;
+
+.main-footer {
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+    padding: 5% 5%;
+    .inside-footer-section {
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        .first-footer {
+            width: 25%;
+        }
+        .second-footer {
+            width: 25%;
+        }
+        .third-footer {
+            width: 25%;
+        }
+        .fourth-footer {
+            width: 25%;
+        }
+    }
+}

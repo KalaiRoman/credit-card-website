@@ -6,8 +6,9 @@ import more from './more.svg';
 import night from './night.svg'
 import res from './res.svg'
 import car from './car.svg'
+import buger from './buger.jpg';
 
-export { active, shopping, home, beauty, more, night, res, car };
+export { active, shopping, home, beauty, more, night, res, car, buger };
 
 
 

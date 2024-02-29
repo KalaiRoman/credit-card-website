@@ -1,22 +1,23 @@
 import './App.scss';
 import Routers from './Routing/Routers';
+import Footer from './middleware/footer/Footer';
 import Header from './middleware/header/Header';
 function App() {
 
   const pathcheck = window.location.pathname;
 
-  console.log(pathcheck, 'pathcheck')
   return (
     <div className='main-routing-section'>
       <div>
-
         {pathcheck === "/" ? <></> : <>
-          <Header />
-
+          {/* <Header /> */}
         </>}
       </div>
       <div>
         <Routers />
+      </div>
+      <div>
+        {/* <Footer /> */}
       </div>
     </div>
   );
