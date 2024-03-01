@@ -10,6 +10,7 @@ function App() {
     <div className='main-routing-section'>
       <div>
         {pathcheck === "/" ? <></> : <>
+          {/* {pathcheck === "/products/:id"} */}
           <Header />
         </>}
       </div>
