@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
-import CommonTitle from '../../middleware/Title'
+import CommonTitle from '../../middleware/Title';
+
+import { useNavigate } from 'react-router-dom';
 import './Category.scss';
 import { active, beauty, car, home, more, night, res, shopping } from '../../assests/images';
 function Category() {
 
+
+    const navigate = useNavigate();
     const [mores, setMore] = useState(false);
     const data = [
         {
@@ -145,6 +149,10 @@ function Category() {
         },
 
     ]
+
+    const NavigatePath = (id) => {
+        navigate(`/products/${id}`)
+    }
     return (
         <div className='main-category-section'>
             <div className='inside-category'>
@@ -161,7 +169,11 @@ function Category() {
                                         if (item?.name == "More") {
                                             setMore(!mores)
                                         }
+                                        else {
+                                            NavigatePath(item?.id)
+                                        }
                                     }}
+
                                 >
                                     <div>
                                         <img src={item?.image} alt={`no Image ${index + 1}`} />

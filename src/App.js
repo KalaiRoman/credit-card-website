@@ -10,14 +10,14 @@ function App() {
     <div className='main-routing-section'>
       <div>
         {pathcheck === "/" ? <></> : <>
-          {/* <Header /> */}
+          <Header />
         </>}
       </div>
       <div>
         <Routers />
       </div>
       <div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );

@@ -1,17 +1,16 @@
 @use "../../sass/abstract/" as *;
 
 .main-cardslider {
-    width: 100%;
+    position: relative;
 }
-
 .inside-cardslider {
     width: 100%;
-    margin: 1.5% auto;
+    // margin: 1.5% auto;
     height: 100%;
-    padding: 4% 0px;
+    // padding: 4% 0px;
 }
 
-.kalai {
+.boxs {
     top: 0;
     left: 0;
     display: flex;
@@ -21,14 +20,9 @@
     justify-content: center;
 }
 
-.empty-box {
-    width: 50px;
-    border: 2px solid #8bb5c5;
-    height: 10px;
-    border-radius: 10px;
-}
 .cardss {
-    width: 100%;
+    width: 90% !important;
+    margin: 0px 20px !important;
     height: 180px !important;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: white;
@@ -36,23 +30,23 @@
     cursor: pointer;
 }
 
-.slick-slider {
-    margin: 20px 15px;
-}
+// .slick-slider {
+//     margin: 20px 15px;
+// }
 .slick-dots {
     bottom: -50px !important;
 }
 
-.slick-slider .slick-slide {
-    padding: 0 15px;
-}
+// .slick-slide {
+//     padding: 0 15px;
+// }
 
-.dot-section-btn {
+.dot-section-btns {
     display: flex;
     gap: 100px !important;
     padding-top: 10% !important;
 }
-.border-inside {
+.border-insides {
     width: 20px !important;
     height: 20px !important;
     color: white;

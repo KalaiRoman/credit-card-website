@@ -8,7 +8,18 @@ function Footer() {
                     {Array(10)?.fill(null)?.map((item, index) => {
                         return (
                             <div key={index}>
-                                texts
+
+                                {index === 0 ? <>
+                                    <div className='fw-bold fs-3 mt-3 mb-3'>
+                                        Heading
+                                    </div>
+                                </> : <>
+                                    <div>
+                                        Texts
+                                    </div>
+                                </>}
+
+
                             </div>
                         )
                     })}
@@ -17,7 +28,15 @@ function Footer() {
                     {Array(10)?.fill(null)?.map((item, index) => {
                         return (
                             <div key={index}>
-                                texts
+                                {index === 0 ? <>
+                                    <div className='fw-bold fs-3 mt-3 mb-3'>
+                                        Heading
+                                    </div>
+                                </> : <>
+                                    <div>
+                                        Texts
+                                    </div>
+                                </>}
                             </div>
                         )
                     })}
@@ -26,7 +45,15 @@ function Footer() {
                     {Array(10)?.fill(null)?.map((item, index) => {
                         return (
                             <div key={index}>
-                                texts
+                                {index === 0 ? <>
+                                    <div className='fw-bold fs-3 mt-3 mb-3'>
+                                        Heading
+                                    </div>
+                                </> : <>
+                                    <div>
+                                        Texts
+                                    </div>
+                                </>}
                             </div>
                         )
                     })}
@@ -35,7 +62,15 @@ function Footer() {
                     {Array(10)?.fill(null)?.map((item, index) => {
                         return (
                             <div key={index}>
-                                texts
+                                {index === 0 ? <>
+                                    <div className='fw-bold fs-3 mt-3 mb-3'>
+                                        Heading
+                                    </div>
+                                </> : <>
+                                    <div>
+                                        Texts
+                                    </div>
+                                </>}
                             </div>
                         )
                     })}
