@@ -4,6 +4,7 @@ import './Home.scss';
 import Header from '../../middleware/header/Header';
 import Category from "../category/Category";
 import CardSlider from "../cardslider/CardSlider";
+import Footer from "../../middleware/footer/Footer";
 
 function Home() {
 
@@ -126,6 +127,10 @@ function Home() {
 
             <div className="mt-5 mb-5">
                 <Category />
+            </div>
+
+            <div>
+                <Footer />
             </div>
 
         </div>

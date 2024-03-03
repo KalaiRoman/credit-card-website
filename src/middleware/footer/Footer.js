@@ -11,7 +11,7 @@ function Footer() {
 
                                 {index === 0 ? <>
                                     <div className='fw-bold fs-3 mt-3 mb-3'>
-                                        Heading
+                                        About
                                     </div>
                                 </> : <>
                                     <div>
@@ -30,7 +30,7 @@ function Footer() {
                             <div key={index}>
                                 {index === 0 ? <>
                                     <div className='fw-bold fs-3 mt-3 mb-3'>
-                                        Heading
+                                        Discover
                                     </div>
                                 </> : <>
                                     <div>
@@ -47,7 +47,7 @@ function Footer() {
                             <div key={index}>
                                 {index === 0 ? <>
                                     <div className='fw-bold fs-3 mt-3 mb-3'>
-                                        Heading
+                                        Card for Business
                                     </div>
                                 </> : <>
                                     <div>
@@ -64,7 +64,7 @@ function Footer() {
                             <div key={index}>
                                 {index === 0 ? <>
                                     <div className='fw-bold fs-3 mt-3 mb-3'>
-                                        Heading
+                                        Languages
                                     </div>
                                 </> : <>
                                     <div>

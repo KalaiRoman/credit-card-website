@@ -8,18 +8,20 @@ function App() {
 
   return (
     <div className='main-routing-section'>
-      <div>
-        {pathcheck === "/" ? <></> : <>
-          {/* {pathcheck === "/products/:id"} */}
-          <Header />
-        </>}
+      <div className="inside-app-routing">
+        <div className='routing-heading'>
+          {/* {pathcheck === "/" ? <></> : <>
+            <Header />
+          </>} */}
+        </div>
+        <div className="routing-body">
+          <Routers />
+        </div>
+        {/* <div className='routing-footer'>
+          <Footer />
+        </div> */}
       </div>
-      <div>
-        <Routers />
-      </div>
-      <div>
-        <Footer />
-      </div>
+
     </div>
   );
 }

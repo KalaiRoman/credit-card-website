@@ -2,11 +2,26 @@ import React, { useState } from 'react'
 import './Header.scss';
 import { headertext } from '../utils';
 import { useLocation } from 'react-router-dom';
+import Sigin from '../../components/auth/Sigin';
+import Signup from '../../components/auth/Signup';
 const Header = () => {
 
+
+    const [type, setType] = useState(null);
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = (paramstype) => {
+        setShow(true)
+        setType(paramstype)
+    };
+
+    const [show1, setShow1] = useState(false);
+    const handleClose1 = () => setShow1(false);
+    const handleShow1 = (paramstype) => {
+        setShow1(true)
+    };
     const history = useLocation();
-
-
     const [thingbox, setThingBox] = useState(false);
     const [thingbox1, setThingBox1] = useState(false);
 
@@ -108,11 +123,20 @@ const Header = () => {
                     <div className='cursor'>
                         {headertext?.writeareview}
                     </div>
-                    <div className='cursor' >
-                        {headertext?.login}
+                    <div className='cursor'>
+                        {/* {headertext?.login} */}
+                        <Sigin show={show} handleShow={handleShow} handleClose={handleClose}
+                            type={type}
+                            handleShowsignup={handleShow1}
+                        />
+
                     </div>
                     <div className='cursor'>
-                        {headertext?.signup}
+                        {/* {headertext?.signup} */}
+                        <Signup
+                            show={show1} handleShow={handleShow1} handleClose={handleClose1}
+                            handleShowLogin={handleShow}
+                        />
                     </div>
                 </div>
             </div> : <>

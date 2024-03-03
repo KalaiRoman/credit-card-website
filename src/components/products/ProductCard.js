@@ -11,6 +11,7 @@ function ProductCard({ index }) {
     return (
         <>
             <div className='card-image mb-4 mt-3 cursor' onClick={ViewProduct}>
+
                 <div>
 
                     {index % 2 === 0 ? <>
