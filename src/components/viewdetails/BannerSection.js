@@ -115,7 +115,7 @@ function BannerSection() {
                             <div className='mt-4'>
                                 {Array(4)?.fill(null)?.map((item, index) => {
                                     return (
-                                        <div className='mt-3 mb-3 flex gap-3 cursor'>
+                                        <div className='mt-3 mb-3 flex gap-3 cursor' key={index}>
                                             <div className='w-[14%]'>
                                                 <img
                                                     className='w-[80px] h-[80px] rounded hover:scale-105'
@@ -135,7 +135,7 @@ function BannerSection() {
                             <div className='p-3'>
                                 {datas?.map((item, index) => {
                                     return (
-                                        <div className='cursor'>
+                                        <div className='cursor' key={index}>
                                             <div className='flex justify-content-between'>
                                                 <div className=''>
                                                     {item?.name}
