@@ -1,11 +1,47 @@
 import React from 'react'
 import './Footer.scss';
 function Footer() {
+
+    const data = ["About Yelp",
+        "Careers",
+        "Press",
+        "Investor Relations",
+        "Trust & Safety",
+        "Content Guidelines",
+        "Accessibility Statement",
+        "Terms of Service",
+        "Privacy Policy",
+        "Ad Choices",
+        "Your Privacy Choices"];
+
+    const data1 = [
+        "Yelp Project Cost Guides",
+        "Collections",
+        "Talk",
+        "Events",
+        "Yelp Blog",
+        "Support",
+        "Yelp Mobile",
+        "Developers",
+        "RSS",
+    ]
+
+    const data2 = [
+        "Yelp for Business",
+        "Business Owner Login",
+        "Claim your Business Page",
+        "Advertise on Yelp",
+        "Yelp for Restaurant Owners",
+        "Table Management",
+        "Business Success Stories",
+        "Business Support",
+        "Yelp Blog for Business",
+    ]
     return (
         <div className='main-footer'>
             <div className='inside-footer-section'>
                 <div className='first-footer'>
-                    {Array(10)?.fill(null)?.map((item, index) => {
+                    {data?.map((item, index) => {
                         return (
                             <div key={index}>
 
@@ -14,8 +50,8 @@ function Footer() {
                                         About
                                     </div>
                                 </> : <>
-                                    <div>
-                                        Texts
+                                    <div className='cursor mt-2 mb-2'>
+                                        {item}
                                     </div>
                                 </>}
 
@@ -25,7 +61,7 @@ function Footer() {
                     })}
                 </div>
                 <div className='second-footer'>
-                    {Array(10)?.fill(null)?.map((item, index) => {
+                    {data1?.map((item, index) => {
                         return (
                             <div key={index}>
                                 {index === 0 ? <>
@@ -33,8 +69,8 @@ function Footer() {
                                         Discover
                                     </div>
                                 </> : <>
-                                    <div>
-                                        Texts
+                                    <div className='cursor mt-2 mb-2'>
+                                        {item}
                                     </div>
                                 </>}
                             </div>
@@ -42,7 +78,7 @@ function Footer() {
                     })}
                 </div>
                 <div className='third-footer'>
-                    {Array(10)?.fill(null)?.map((item, index) => {
+                    {data2?.map((item, index) => {
                         return (
                             <div key={index}>
                                 {index === 0 ? <>
@@ -50,8 +86,8 @@ function Footer() {
                                         Card for Business
                                     </div>
                                 </> : <>
-                                    <div>
-                                        Texts
+                                    <div className='cursor mt-2 mb-2'>
+                                        {item}
                                     </div>
                                 </>}
                             </div>
@@ -59,7 +95,7 @@ function Footer() {
                     })}
                 </div>
                 <div className='fourth-footer'>
-                    {Array(10)?.fill(null)?.map((item, index) => {
+                    {Array(2)?.fill(null)?.map((item, index) => {
                         return (
                             <div key={index}>
                                 {index === 0 ? <>
@@ -68,7 +104,7 @@ function Footer() {
                                     </div>
                                 </> : <>
                                     <div>
-                                        Texts
+                                        English
                                     </div>
                                 </>}
                             </div>

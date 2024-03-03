@@ -65,7 +65,7 @@ function CardSlider() {
                 <CommonTitle title="Cards" />
             </div>
 
-            <div className='inside-cardslider flex gap-3'>
+            <div className='inside-cardslider '>
                 <Slider {...settings}>
                     {Array(10)?.fill(null)?.map((item, index) => {
                         return (
