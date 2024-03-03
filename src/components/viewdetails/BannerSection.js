@@ -9,7 +9,7 @@ function BannerSection() {
         {
             id: 1,
             name: "Write a review",
-            image: <i class="fa-solid fa-camera"></i>
+            image: <i class="fa-regular fa-star"></i>
         },
         {
             id: 2,
@@ -25,6 +25,11 @@ function BannerSection() {
             id: 4,
             name: "Save",
             image: <i class="fa-regular fa-bookmark"></i>
+        },
+        {
+            id: 4,
+            name: "Follow",
+            image: <i class="fa-solid fa-plus"></i>
         }
     ]
     return (
@@ -67,7 +72,7 @@ function BannerSection() {
             <div className='inside-section-banner'>
                 <div className='split-section-banner'>
                     <div className='left-banner-section'>
-                        <div className='row gap-4 d-flex align-items-center'>
+                        <div className='row gap-3 d-flex align-items-center'>
                             {data?.map((item, index) => {
                                 return (
                                     <div key={index} className={index === 0 ? "active-btn" : "list-btn"}>

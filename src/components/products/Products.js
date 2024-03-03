@@ -6,11 +6,9 @@ import Footer from '../../middleware/footer/Footer';
 function Products() {
     return (
         <div className='main-product'>
-
             <div>
                 <Header />
             </div>
-
             <div className='inside-main-products mb-5'>
 
                 <div className='row d-flex align-items-center justify-content-center gap-3 mt-4 mb-3'>

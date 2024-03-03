@@ -154,7 +154,7 @@ function Category() {
         navigate(`/products/${id}`)
     }
     return (
-        <div className='main-category-section'>
+        <div className='main-category-section mt-5'>
             <div className='inside-category'>
 
                 <div className='mt-5 mb-4'>

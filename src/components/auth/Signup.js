@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
-import Button from 'react-bootstrap/Button';
+import React from 'react'
 import Modal from 'react-bootstrap/Modal';
 import './Signin.scss';
-import Form from 'react-bootstrap/Form';
 function Signup({ show, handleClose, handleShow, handleShowLogin }) {
+    const Navigateterms = () => {
+        window.open('/termsofservice')
+    }
+    const Navigateprivacy = () => {
+        window.open('/privacypolicy')
+    }
     return (
         <div>
             <button className='signup-btn' onClick={() => (handleShow("signup"))}>
@@ -29,7 +33,7 @@ function Signup({ show, handleClose, handleShow, handleShowLogin }) {
 
                         </div>
                         <div className='text-center  mt-4  mb-5'>
-                            By proceeding, you agree to Yelp’s <span className='link'>Terms of Service</span> and acknowledge Yelp’s <span className='link'>Privacy Policy.</span>
+                            By proceeding, you agree to Yelp’s <span className='link' onClick={Navigateterms}>Terms of Service</span> and acknowledge Yelp’s <span className='link' onClick={Navigateprivacy}>Privacy Policy.</span>
                         </div>
 
 

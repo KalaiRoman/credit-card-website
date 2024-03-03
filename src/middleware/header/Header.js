@@ -6,7 +6,6 @@ import Sigin from '../../components/auth/Sigin';
 import Signup from '../../components/auth/Signup';
 const Header = () => {
 
-
     const [type, setType] = useState(null);
 
     const [show, setShow] = useState(false);
@@ -128,6 +127,8 @@ const Header = () => {
                         <Sigin show={show} handleShow={handleShow} handleClose={handleClose}
                             type={type}
                             handleShowsignup={handleShow1}
+                            path={history?.pathname}
+
                         />
 
                     </div>
@@ -211,11 +212,20 @@ const Header = () => {
                         <div className='cursor'>
                             {headertext?.writeareview}
                         </div>
-                        <div className='cursor' >
-                            {headertext?.login}
+                        <div className='cursor'>
+                            <Sigin show={show} handleShow={handleShow} handleClose={handleClose}
+                                type={type}
+                                handleShowsignup={handleShow1}
+                                path={history?.pathname}
+                            />
                         </div>
                         <div className='cursor'>
-                            {headertext?.signup}
+                            <Signup
+                                show={show1} handleShow={handleShow1} handleClose={handleClose1}
+                                handleShowLogin={handleShow}
+                                path={history?.pathname}
+
+                            />
                         </div>
                     </div>
                 </div>
