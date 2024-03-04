@@ -9,6 +9,9 @@
     .header-logo-section {
         width: 15%;
         color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .middle-header-section {
         width: 45%;
@@ -109,6 +112,9 @@
     padding: 10px 3px;
     .header-logo-section {
         width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .middle-header-section {
         width: 45%;
@@ -187,4 +193,14 @@
         justify-content: space-around;
         align-items: center;
     }
+}
+
+.burger-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

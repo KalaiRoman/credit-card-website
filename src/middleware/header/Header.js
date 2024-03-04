@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import './Header.scss';
 import { headertext } from '../utils';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Sigin from '../../components/auth/Sigin';
 import Signup from '../../components/auth/Signup';
+import burger from '../../assests/images/burger.png'
 const Header = () => {
+
+    const navigate = useNavigate();
 
     const [type, setType] = useState(null);
 
@@ -50,11 +53,19 @@ const Header = () => {
         }
     ]
 
+
+    const changePathhome = () => {
+        navigate("/");
+    }
+
     return (
         <>
             {history?.pathname == "/" ? <div className='path-names'>
                 <div className='header-logo-section'>
-                    logo
+                    <img src={burger} alt="no image"
+                        onClick={changePathhome}
+                        className='burger-logo'
+                    />
                 </div>
                 <div className='middle-header-section'>
                     <div className='main-search-box' onMouseLeave={() => {
@@ -122,6 +133,9 @@ const Header = () => {
                     <div className='cursor'>
                         {headertext?.writeareview}
                     </div>
+                    <div className='cursor' onClick={() => navigate("/contact")}>
+                        Contactus
+                    </div>
                     <div className='cursor'>
                         {/* {headertext?.login} */}
                         <Sigin show={show} handleShow={handleShow} handleClose={handleClose}
@@ -144,7 +158,11 @@ const Header = () => {
 
                 <div className={"main-header-section"}>
                     <div className='header-logo-section'>
-                        logo
+                        <img src={burger} alt="no image"
+                            onClick={changePathhome}
+                            className='burger-logo'
+                        />
+
                     </div>
                     <div className='middle-header-section'>
                         <div className='main-search-box' onMouseLeave={() => {
@@ -211,6 +229,9 @@ const Header = () => {
                         </div>
                         <div className='cursor'>
                             {headertext?.writeareview}
+                        </div>
+                        <div className='cursor' onClick={() => navigate("/contact")}>
+                            Contactus
                         </div>
                         <div className='cursor'>
                             <Sigin show={show} handleShow={handleShow} handleClose={handleClose}

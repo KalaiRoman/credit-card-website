@@ -130,7 +130,7 @@ function BannerSection() {
                             </div>
                         </div>
                     </div>
-                    <div className='right-banner-section'>
+                    <div className='right-banner-section 	 top-0 position: sticky;'>
                         <div className='border w-[100%]'>
                             <div className='p-3'>
                                 {datas?.map((item, index) => {
