@@ -9,6 +9,13 @@ function CardSlider() {
     const [activeSlide2, setActiveSlide2] = useState(0);
 
     const [indexs, setIndexs] = useState(0);
+
+    const data = [
+        "https://www.visasoutheasteurope.com/dam/VCOM/regional/ap/taiwan/global-elements/images/tw-visa-platinum-card-498x280.png",
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTshJCikQb6DuSqH_MW_Ta25U56d3P6knvuOTRyGAe8G3UJPZzmN1-CthOHM3Wns8NxQuo&usqp=CAU',
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLoX0UzN4KyNsgG84EsFRUVR1QA9PPXdH2Xci3tO-Er_qyA35Q8qr07lMEN3c4S1G7ByQ&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMjF1VNb95LlHZ8R6Ta7vJNl4mdamqPNO_5wnwxlGnFIS8Hm33c2wDGPjdPY5g8qm1DUY&usqp=CAU"
+    ]
     var settings = {
         dots: true,
         infinite: true,
@@ -56,7 +63,9 @@ function CardSlider() {
             clearInterval(f);
             setIndexs(0)
         }
-    }, [indexs])
+    }, [indexs]);
+
+
 
     return (
         <div className='main-cardslider mt-5 mb-5'>
@@ -67,10 +76,10 @@ function CardSlider() {
 
             <div className='inside-cardslider '>
                 <Slider {...settings}>
-                    {Array(10)?.fill(null)?.map((item, index) => {
+                    {data?.map((item, index) => {
                         return (
-                            <div className='cardss border' key={index}>
-                                {index + 1}
+                            <div className='cardss hover:scale-90' key={index}>
+                                <img src={item} alt="no image" className='credit-card-image' />
                             </div>
                         )
                     })}

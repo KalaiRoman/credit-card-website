@@ -59,7 +59,7 @@ function BannerSection() {
     return (
         <div className='main-banner-section'>
             <div className='inside-banner-image'>
-                <img src={buger} alt="no image" className='buger-image' />
+                <img src={'https://www.shutterstock.com/image-photo/bucket-cleaning-items-on-wooden-260nw-1159292470.jpg'} alt="no image" className='buger-image' />
                 <div className='banner-textss'>
                     <div>
                         Shopping
@@ -96,7 +96,7 @@ function BannerSection() {
             <div className='inside-section-banner'>
                 <div className='split-section-banner'>
                     <div className='left-banner-section'>
-                        <div className='row gap-3 d-flex align-items-center'>
+                        <div className='row gap-3 d-flex align-items-center lg:gap-1'>
                             {data?.map((item, index) => {
                                 return (
                                     <div key={index} className={index === 0 ? "active-btn" : "list-btn"}>
@@ -119,7 +119,7 @@ function BannerSection() {
                                             <div className='w-[14%]'>
                                                 <img
                                                     className='w-[80px] h-[80px] rounded hover:scale-105'
-                                                    src="https://img.freepik.com/free-photo/delicious-burger-with-many-ingredients-isolated-white-background-tasty-cheeseburger-splash-sauce_90220-1266.jpg?size=338&ext=jpg&ga=GA1.1.1395880969.1709424000&semt=sph" alt="no image" />
+                                                    src="https://media.istockphoto.com/id/918825114/photo/cleaning-set-for-different-surfaces-in-kitchen-bathroom-and-other-rooms-empty-place-for-text.jpg?s=612x612&w=0&k=20&c=fe-FU1_2dHqmvQLE4XVCiNEQcZw-42q0wcQAjPN85HA=" alt="no image" />
                                             </div>
                                             <div className='w-[84%] mt-3'>
                                                 Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
@@ -130,7 +130,7 @@ function BannerSection() {
                             </div>
                         </div>
                     </div>
-                    <div className='right-banner-section 	 top-0 position: sticky;'>
+                    <div className='right-banner-section top-0 position: sticky;'>
                         <div className='border w-[100%]'>
                             <div className='p-3'>
                                 {datas?.map((item, index) => {

@@ -12,6 +12,12 @@
             width: 80%;
             margin: 0 auto;
             padding-top: 5%;
+            @include lgBreakPoint {
+                width: 100%;
+            }
+            @include xlBreakPoint {
+                width: 95%;
+            }
         }
         .list-category-card {
             width: 22% !important;

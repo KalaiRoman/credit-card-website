@@ -9,6 +9,12 @@
         width: 80%;
         height: auto;
         margin: 0 auto;
+        @include lgBreakPoint {
+            width: 100%;
+        }
+        @include xlBreakPoint {
+            width: 97.9%;
+        }
         .card-image {
             width: 24% !important;
             .burger-image {

@@ -42,13 +42,13 @@ function Home() {
         afterChange: current => setActiveSlide2(current)
     };
     const data = [
-        {
-            id: 1,
-            url: 'https://s3-media0.fl.yelpcdn.com/educatorphoto/tWLrOY2wyZGrHM8Gwkh-lA/o.jpg',
-            name: "2024 Top 100 Pizza Spots",
-            title: "See list",
-            image: <i class="fa-solid fa-list"></i>
-        },
+        // {
+        //     id: 1,
+        //     url: 'https://s3-media0.fl.yelpcdn.com/educatorphoto/tWLrOY2wyZGrHM8Gwkh-lA/o.jpg',
+        //     name: "2024 Top 100 Pizza Spots",
+        //     title: "See list",
+        //     image: <i class="fa-solid fa-list"></i>
+        // },
         {
             id: 2,
             url: 'https://s3-media0.fl.yelpcdn.com/educatorphoto/fP07TGmh-eQwrs3j-aa1Qg/o.jpg',
@@ -106,7 +106,7 @@ function Home() {
                         )
                     })}
                 </div>
-                <div className="kalai">
+                <div className="list-dots">
                     {data?.map((item, index) => {
                         return (
                             <div key={index} className="empty-box mb-4" style={{

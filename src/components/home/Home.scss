@@ -19,6 +19,12 @@
         top: 32%;
         left: 25%;
         width: 32%;
+        @include lgBreakPoint {
+            width: 60%;
+        }
+        @include xlBreakPoint {
+            width: 60%;
+        }
     }
     .list-names-positions {
         font-size: 3.2rem;
@@ -61,10 +67,13 @@
     overflow: hidden;
 }
 
-.kalai {
+.list-dots {
     position: absolute;
     top: 35%;
     left: 20%;
+    @include lgBreakPoint {
+        left: 15%;
+    }
 }
 
 .empty-box {

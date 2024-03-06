@@ -1,6 +1,8 @@
 import React from 'react'
 import Modal from 'react-bootstrap/Modal';
 import './Signin.scss';
+import Form from 'react-bootstrap/Form';
+
 function Signup({ show, handleClose, handleShow, handleShowLogin }) {
     const Navigateterms = () => {
         window.open('/termsofservice')
@@ -38,7 +40,7 @@ function Signup({ show, handleClose, handleShow, handleShowLogin }) {
 
 
 
-                        <div className='form-section-login mt-4'>
+                        {/* <div className='form-section-login mt-4'>
                             {Array(3)?.fill(null)?.map((item, index) => {
                                 return (
                                     <div className='mt-3 mb-4'>
@@ -64,6 +66,26 @@ function Signup({ show, handleClose, handleShow, handleShowLogin }) {
                                     </div>
                                 )
                             })}
+                        </div> */}
+
+                        <div className='form-section-login mt-4'>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>userName</Form.Label>
+                                <Form.Control type="text" placeholder="Enter Username" />
+                                <Form.Text className="text-muted">
+                                </Form.Text>
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control type="email" placeholder="Enter email" />
+                                <Form.Text className="text-muted">
+                                </Form.Text>
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="formBasicPassword">
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password" placeholder="Password" />
+                            </Form.Group>
+                            <button className='login-button'>Sign Up</button>
                         </div>
                         <div className='form-section-login mt-5 mb-3'>
                             <hr />

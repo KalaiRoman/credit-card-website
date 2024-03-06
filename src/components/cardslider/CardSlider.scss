@@ -4,9 +4,9 @@
     position: relative;
 }
 .inside-cardslider {
-    width: 100%;
+    width: 100% !important;
     // margin: 1.5% auto;
-    height: 100%;
+    height: 100% !important;
     // padding: 4% 0px;
 }
 
@@ -21,13 +21,25 @@
 }
 
 .cardss {
-    width: 90% !important;
-    margin: 0px 20px !important;
-    height: 180px !important;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    background-color: white;
+    width: 100% !important;
+    // margin: 0px 20px !important;
+    height: 200px !important;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    // background-color: white;
     border-radius: 10px;
     cursor: pointer;
+    padding: 3px;
+    .credit-card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        @include lgBreakPoint {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
 }
 
 // .slick-slider {

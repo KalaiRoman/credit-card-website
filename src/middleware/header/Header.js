@@ -29,12 +29,6 @@ const Header = () => {
 
     const data = [
         {
-            id: 1,
-            name: "Burger",
-            image: <i class="fa-solid fa-burger"></i>
-
-        },
-        {
             id: 2,
             name: "Truck",
             image: <i class="fa-solid fa-truck"></i>
@@ -61,11 +55,15 @@ const Header = () => {
     return (
         <>
             {history?.pathname == "/" ? <div className='path-names'>
-                <div className='header-logo-section'>
-                    <img src={burger} alt="no image"
+                <div className='header-logo-section cursor text-2xl fw-bold flex align-items-center justify-center'
+
+                    onClick={changePathhome}
+                >
+                    {/* <img src={burger} alt="no image"
                         onClick={changePathhome}
                         className='burger-logo'
-                    />
+                    /> */}
+                    Home
                 </div>
                 <div className='middle-header-section'>
                     <div className='main-search-box' onMouseLeave={() => {
@@ -127,13 +125,13 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='right-header-section'>
-                    <div className='cursor'>
+                    {/* <div className='cursor'>
                         {headertext?.yelpforbusiness}
                     </div>
                     <div className='cursor'>
                         {headertext?.writeareview}
-                    </div>
-                    <div className='cursor' onClick={() => navigate("/contact")}>
+                    </div> */}
+                    <div className='cursor text-2xl fw-bold' onClick={() => navigate("/contact")}>
                         Contactus
                     </div>
                     <div className='cursor'>
@@ -157,11 +155,16 @@ const Header = () => {
             </div> : <>
 
                 <div className={"main-header-section"}>
-                    <div className='header-logo-section'>
-                        <img src={burger} alt="no image"
+                    <div className='header-logo-section cursor text-2xl fw-bold flex align-items-center justify-center'
+                        onClick={changePathhome}
+
+                    >
+                        {/* <img src={burger} alt="no image"
                             onClick={changePathhome}
                             className='burger-logo'
-                        />
+                        /> */}
+                        Home
+
 
                     </div>
                     <div className='middle-header-section'>
@@ -224,13 +227,13 @@ const Header = () => {
                         </div>
                     </div>
                     <div className='right-header-section'>
-                        <div className='cursor'>
+                        {/* <div className='cursor'>
                             {headertext?.yelpforbusiness}
                         </div>
                         <div className='cursor'>
                             {headertext?.writeareview}
-                        </div>
-                        <div className='cursor' onClick={() => navigate("/contact")}>
+                        </div> */}
+                        <div className='cursor text-2xl fw-bold' onClick={() => navigate("/contact")}>
                             Contactus
                         </div>
                         <div className='cursor'>
