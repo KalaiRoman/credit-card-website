@@ -73,7 +73,10 @@ function Home() {
     ]
     return (
         <div className='main-home-section'>
-            <div className='inside-home-section'>
+            <div className='banner-home-section'>
+                <Header />
+            </div>
+            {/* <div className='inside-home-section'>
                 <div className='banner-home-section'>
                     <Header />
                 </div>
@@ -119,9 +122,9 @@ function Home() {
                         )
                     })}
                 </div>
-            </div>
+            </div> */}
 
-            <div>
+            <div className="mt-[10%]">
                 <CardSlider />
             </div>
 

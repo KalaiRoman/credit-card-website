@@ -54,17 +54,14 @@ const Header = () => {
 
     return (
         <>
-            {history?.pathname == "/" ? <div className='path-names'>
+            {/* {history?.pathname == "/" ? <div className='path-names'>
                 <div className='header-logo-section cursor text-2xl fw-bold flex align-items-center justify-center'
 
                     onClick={changePathhome}
                 >
-                    {/* <img src={burger} alt="no image"
-                        onClick={changePathhome}
-                        className='burger-logo'
-                    /> */}
+
                     Home
-                </div>
+                </div >
                 <div className='middle-header-section'>
                     <div className='main-search-box' onMouseLeave={() => {
                         setThingBox(false)
@@ -125,17 +122,11 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='right-header-section'>
-                    {/* <div className='cursor'>
-                        {headertext?.yelpforbusiness}
-                    </div>
-                    <div className='cursor'>
-                        {headertext?.writeareview}
-                    </div> */}
-                    <div className='cursor text-2xl fw-bold' onClick={() => navigate("/contact")}>
+
+                    <div className='cursor' onClick={() => navigate("/contact")}>
                         Contactus
                     </div>
                     <div className='cursor'>
-                        {/* {headertext?.login} */}
                         <Sigin show={show} handleShow={handleShow} handleClose={handleClose}
                             type={type}
                             handleShowsignup={handleShow1}
@@ -145,24 +136,20 @@ const Header = () => {
 
                     </div>
                     <div className='cursor'>
-                        {/* {headertext?.signup} */}
                         <Signup
                             show={show1} handleShow={handleShow1} handleClose={handleClose1}
                             handleShowLogin={handleShow}
                         />
                     </div>
                 </div>
-            </div> : <>
+            </div > : <>
 
                 <div className={"main-header-section"}>
                     <div className='header-logo-section cursor text-2xl fw-bold flex align-items-center justify-center'
                         onClick={changePathhome}
 
                     >
-                        {/* <img src={burger} alt="no image"
-                            onClick={changePathhome}
-                            className='burger-logo'
-                        /> */}
+                       
                         Home
 
 
@@ -227,12 +214,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className='right-header-section'>
-                        {/* <div className='cursor'>
-                            {headertext?.yelpforbusiness}
-                        </div>
-                        <div className='cursor'>
-                            {headertext?.writeareview}
-                        </div> */}
+                       
                         <div className='cursor text-2xl fw-bold' onClick={() => navigate("/contact")}>
                             Contactus
                         </div>
@@ -253,7 +235,100 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </>}
+            </>} */}
+
+
+            <div className={"main-header-section"} >
+                <div className='header-logo-section cursor flex align-items-center justify-center'
+                    onClick={changePathhome}
+
+                >
+
+                    Home
+
+
+                </div>
+                <div className='middle-header-section'>
+                    <div className='main-search-box' onMouseLeave={() => {
+                        setThingBox(false)
+                        setThingBox1(false)
+                    }}>
+                        <div className='first-search' onClick={() => {
+                            setThingBox(true)
+                            setThingBox1(false)
+                        }}>
+                            <input type="text" placeholder='things to do, nail salons, plumbers' className='thing-box'
+                            />
+                            {thingbox ? <>
+                                <div className='thing-position'>
+                                    {data?.map((item, index) => {
+                                        return (
+                                            <div key={index} className='d-flex gap-3 list-things cursor mb-3 mt-1'>
+                                                <div>
+                                                    {item?.name}
+                                                </div>
+                                                <div>
+                                                    {item?.image}
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </> : <></>}
+                        </div>
+                        <div className='middle-search' onClick={() => {
+                            setThingBox1(true)
+                            setThingBox(false)
+                        }}>
+                            <input type="text" placeholder='Location...' className='thing-box'
+                            />
+                            {thingbox1 ? <>
+                                <div className='thing-position'>
+                                    <div className='location-texts cursor'>
+                                        <i class="fa-solid fa-location-dot"></i> <span>Current Location</span>
+                                    </div>
+                                    {data?.map((item, index) => {
+                                        return (
+                                            <div key={index} className='d-flex gap-3 list-things cursor mb-3 mt-1'>
+                                                <div>
+                                                    {item?.name}
+                                                </div>
+                                                <div>
+                                                    {item?.image}
+                                                </div>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </> : <></>}
+                        </div>
+                        <div className='end-serach-icon'>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <div className='right-header-section'>
+
+                    <div className='cursor' onClick={() => navigate("/contact")}>
+                        Contactus
+                    </div>
+                    <div className='cursor'>
+                        <Sigin show={show} handleShow={handleShow} handleClose={handleClose}
+                            type={type}
+                            handleShowsignup={handleShow1}
+                            path={history?.pathname}
+                        />
+                    </div>
+                    <div className='cursor'>
+                        <Signup
+                            show={show1} handleShow={handleShow1} handleClose={handleClose1}
+                            handleShowLogin={handleShow}
+                            path={history?.pathname}
+
+                        />
+                    </div>
+                </div>
+            </div>
         </>
 
     )
