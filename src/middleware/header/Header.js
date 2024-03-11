@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Sigin from '../../components/auth/Sigin';
 import Signup from '../../components/auth/Signup';
 import burger from '../../assests/images/burger.png'
+import Dropdown from 'react-bootstrap/Dropdown';
 const Header = () => {
 
     const navigate = useNavigate();
@@ -312,21 +313,49 @@ const Header = () => {
                     <div className='cursor' onClick={() => navigate("/contact")}>
                         Contactus
                     </div>
-                    <div className='cursor'>
-                        <Sigin show={show} handleShow={handleShow} handleClose={handleClose}
-                            type={type}
-                            handleShowsignup={handleShow1}
-                            path={history?.pathname}
-                        />
-                    </div>
-                    <div className='cursor'>
-                        <Signup
-                            show={show1} handleShow={handleShow1} handleClose={handleClose1}
-                            handleShowLogin={handleShow}
-                            path={history?.pathname}
 
-                        />
-                    </div>
+
+                    {!true ? <>
+                        <Dropdown
+
+                        >
+                            <Dropdown.Toggle variant="bg-none" id="dropdown-basic" className="outline-none">
+                                <img className="w-10 h-10 rounded overflow-hidden" src="https://t3.ftcdn.net/jpg/05/60/26/08/360_F_560260880_O1V3Qm2cNO5HWjN66mBh2NrlPHNHOUxW.jpg" alt="no image" />
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <div className='pl-2 pr-2 mt-2 mb-3'>
+                                    <div onClick={() => window.location.assign("/profile")}
+                                        className='cursor pl-3 hover:scale-105 hover:text-red-600 hover:border-b w-auto'>
+                                        Profile
+                                    </div>
+
+                                    <div className='cursor pl-3 mt-3 hover:scale-105 hover:text-red-600 hover:border-b w-auto'>
+                                        Logout
+                                    </div>
+
+                                </div>
+
+                            </Dropdown.Menu>
+                        </Dropdown>
+                    </> : <>
+
+                        <div className='cursor'>
+                            <Sigin show={show} handleShow={handleShow} handleClose={handleClose}
+                                type={type}
+                                handleShowsignup={handleShow1}
+                                path={history?.pathname}
+                            />
+                        </div>
+                        <div className='cursor'>
+                            <Signup
+                                show={show1} handleShow={handleShow1} handleClose={handleClose1}
+                                handleShowLogin={handleShow}
+                                path={history?.pathname}
+                            />
+                        </div>
+                    </>}
+
                 </div>
             </div>
         </>

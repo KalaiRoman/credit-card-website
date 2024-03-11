@@ -6,6 +6,7 @@ import Products from './../components/products/Products';
 import Terms from './../components/Terams/Terms';
 import Privacy from './../components/Terams/Privacy';
 import Contact from '../components/contact/Contact';
+import Profile from '../components/profile/Profile';
 function Routers() {
 
     return (
@@ -17,6 +18,8 @@ function Routers() {
                 <Route exact path="/termsofservice" element={<Terms />}></Route>
                 <Route exact path="/privacypolicy" element={<Privacy />}></Route>
                 <Route exact path="/contact" element={<Contact />}></Route>
+                <Route exact path="/profile" element={<Profile />}></Route>
+
 
 
             </Routes>
