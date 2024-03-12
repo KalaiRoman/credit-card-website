@@ -7,6 +7,7 @@ import Terms from './../components/Terams/Terms';
 import Privacy from './../components/Terams/Privacy';
 import Contact from '../components/contact/Contact';
 import Profile from '../components/profile/Profile';
+import Kyc from '../components/kyc/Kyc';
 function Routers() {
 
     return (
@@ -19,6 +20,8 @@ function Routers() {
                 <Route exact path="/privacypolicy" element={<Privacy />}></Route>
                 <Route exact path="/contact" element={<Contact />}></Route>
                 <Route exact path="/profile" element={<Profile />}></Route>
+                <Route exact path="/kyc" element={<Kyc />}></Route>
+
 
 
 

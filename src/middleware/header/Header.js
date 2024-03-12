@@ -315,7 +315,7 @@ const Header = () => {
                     </div>
 
 
-                    {!true ? <>
+                    {true ? <>
                         <Dropdown
 
                         >
@@ -329,7 +329,10 @@ const Header = () => {
                                         className='cursor pl-3 hover:scale-105 hover:text-red-600 hover:border-b w-auto'>
                                         Profile
                                     </div>
-
+                                    <div onClick={() => window.location.assign("/kyc")}
+                                        className='cursor pl-3  pt-3 hover:scale-105 hover:text-red-600 hover:border-b w-auto'>
+                                        KYC
+                                    </div>
                                     <div className='cursor pl-3 mt-3 hover:scale-105 hover:text-red-600 hover:border-b w-auto'>
                                         Logout
                                     </div>
