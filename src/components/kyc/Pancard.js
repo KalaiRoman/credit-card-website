@@ -4,7 +4,7 @@ function Pancard() {
     return (
         <div className='border p-3 rounded'>
             <div className='fw-bold text-center text-3xl mb-3 mt-3'>
-                Pan Card Details
+                Verify PanCard Number
             </div>
             <div className='flex align-items-center justify-content-center justify-content-center'>
                 <img src="https://pay1v2site.s3.ap-south-1.amazonaws.com/pancard.svg" alt="no image"

@@ -4,7 +4,7 @@ function Adharcard() {
     return (
         <div className='border p-3 rounded'>
             <div className='fw-bold text-center text-3xl mb-3 mt-3'>
-                Aadhaar Details
+                Verify Aadhaar Number
             </div>
             <div className='flex align-items-center justify-content-center justify-content-center'>
                 <img src="https://cdn.pixabay.com/photo/2022/11/09/00/44/aadhaar-card-7579588_960_720.png" alt="no image"
